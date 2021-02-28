@@ -12,7 +12,7 @@ public class Task2 {
         }
         if (b > a) {
             for (int c = a; c < b; c++) {
-                if (c % 5 == 0 && c % 10 != 0 && c != a && c != b) {
+                if (c % 5 == 0 && c % 10 != 0 && c != a) {
                     System.out.print(c + " ");
                 }
             }

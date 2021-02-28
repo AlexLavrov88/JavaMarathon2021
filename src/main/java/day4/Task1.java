@@ -22,8 +22,8 @@ public class Task1 {
         ) {
             if (x > 8) countMaxEight++;
             if( x==1) countOne++;
-            if (x %2 ==0 ) countYes++;
-            if(x%2!=0) countNo++;
+            if (x%2 ==0 ) countYes++;
+            else countNo++;
             countSumm = countSumm + x;
         }
         System.out.println("Длина массива: " + a.length);

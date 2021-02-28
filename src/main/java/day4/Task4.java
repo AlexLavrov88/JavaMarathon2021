@@ -10,16 +10,20 @@ public class Task4 {
             mas[i] = random.nextInt(10000);
         }
         int summ = 0;
+        int maxsumm = 0;
         int count = 0;
-        for (int i = 1; i < mas.length-1; i++) {
-            int summ3 = mas[i - 1] + mas[i] + mas[i + 1];
-
-            if (summ < summ3) {
-                summ = summ3;
-                count = i - 1;
+        for (int i = 0; i < mas.length -2; i++) {
+            summ = 0;
+            for (int j = i; j < i + 3; j++) {
+                summ = summ +mas[j];
+            }
+            if (summ > maxsumm) {
+                maxsumm = summ;
+                count = i;
             }
         }
         System.out.println(summ);
         System.out.println(count);
     }
 }
+

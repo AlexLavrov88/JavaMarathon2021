@@ -12,17 +12,17 @@ public class Task3 {
             }
         }
         int summ = 0;
+        int summ1 = 0;
         int count = 0;
         for (int i = 0; i <matrix.length ; i++) {
+            if (summ < summ1) {
+                summ = summ1;
+                count = i-1;
+            }
             for (int j = 0; j < matrix[i].length; j++) {
-                int summ1 = +matrix[i][j];
-                if (summ < summ1) {
-                    summ = summ1;
-                    count = i;
-                }
+                 summ1 = +matrix[i][j];
             }
         }
         System.out.println(count);
-
     }
 }
